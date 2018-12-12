@@ -8,6 +8,9 @@ yarn-error.log*
 #Idea files
 *.idea
 
+#build files
+release-builds/
+
 # Runtime data
 pids
 *.pid
