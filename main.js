@@ -1,8 +1,9 @@
-const {app, BrowserWindow, Menu} = require('electron');
+const {app, BrowserWindow, Menu, ipcMain,ipcRenderer } = require('electron');
 const shell = require('electron').shell;
 const path = require('path');
 const url = require('url');
-require('electron-reload')(__dirname);
+
+// require('electron-reload')(__dirname);
 let __localDir = "src/";
 
 let win;
@@ -16,7 +17,7 @@ function createWindow () {
     win.loadFile(fileUrl);
 
     // Open the DevTools.
-    // win.webContents.openDevTools();
+    win.webContents.openDevTools();
 
     // Emitted when the window is closed.
     win.on('closed', () => {
@@ -73,3 +74,9 @@ app.on('activate', () => {
         createWindow()
     }
 });
+
+
+ipcMain.on('update-notify-value', function (event, arg) {
+    win.webContents.send('targetPriceVal', arg)
+});
+
