@@ -1,0 +1,35 @@
+{
+  "name": "bitaunty",
+  "version": "1.0.0",
+  "description": "A crypto watchlist desktop application made with electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/navi25/BitAunty.git"
+  },
+  "keywords": [
+    "Cryptography",
+    "Electron",
+    "React",
+    "DesktopApp"
+  ],
+  "author": "Navendra Jha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/navi25/BitAunty/issues"
+  },
+  "homepage": "https://github.com/navi25/BitAunty#readme",
+  "devDependencies": {
+    "electron": "3.0.11",
+    "electron-reload": "^1.4.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "path": "^0.12.7",
+    "url": "^0.11.0"
+  }
+}
